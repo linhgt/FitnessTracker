@@ -15,8 +15,8 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-app.use(require("./routes/apiRoutes"));
-app.use(require("./routes/htmlRoutes"));
+app.use(require("./routes/apiRoutes.js"));
+app.use(require("./routes/htmlRoutes.js"));
 
 //Setup connection to mongoose DB
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
